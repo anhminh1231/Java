@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Mang7 {
+public class Mang8 {
     public static void main(String[] args) {
         int n;
 
@@ -16,19 +16,19 @@ public class Mang7 {
         }
         
         for (int i = 0; i < n; i++) {
-            int min = arr[i];
-            int vitrimin = i;
+            int max = arr[i];
+            int vitrimax = i;
             
             for (int x = i; x < n; x++) {
-                if (arr[x] < min ) {
-                    min = arr[x];
-                    vitrimin = x;
+                if (arr[x] > max ) {
+                    max = arr[x];
+                    vitrimax = x;
                 }
             }
 
             int tam = arr[i];
-            arr[i] = arr[vitrimin];
-            arr[vitrimin] = tam;
+            arr[i] = arr[vitrimax];
+            arr[vitrimax] = tam;
 
         }
 
@@ -36,5 +36,6 @@ public class Mang7 {
             System.out.print(arr[i] + " ");
         }
         
+
     }
 }
