@@ -24,7 +24,7 @@ public class Mang1 {
 
         }
         System.out.print("So lon nhat la: " + max);
-        System.out.print("xong");
+        System.out.print("xong thiet ha?");
 
     }
 }
