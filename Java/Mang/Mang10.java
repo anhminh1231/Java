@@ -1,6 +1,20 @@
 import java.util.Scanner;
 
 public class Mang10 {
+
+    public static int SoNguyenTo (int x) {
+
+        int lasonguyento = 1;
+
+        for (int i = 2; i < arr[b]; i++) {
+            if (arr[b] % i == 0) {
+                lasonguyento = 0;
+            }
+        }
+
+        return lasonguyento;
+    }
+
     public static void main(String[] args) {
         int n;
 
@@ -16,14 +30,8 @@ public class Mang10 {
         }
 
         for (int b = 0; b < n; b++) {
-            int lasonguyento = 1;
-
-            for (int i = 2; i < arr[b]; i++) {
-                if (arr[b] % i == 0) {
-                    lasonguyento = 0;
-                }
-            }
-            if (lasonguyento == 1) {
+            
+            if (SoNguyenTo(arr[b]) == 1) {
                 System.out.println(arr[b] + " la so nguyen to");
             }else {
                 System.out.println(arr[b] + " Khong la so nguyen to");
