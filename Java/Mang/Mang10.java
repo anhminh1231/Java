@@ -15,17 +15,20 @@ public class Mang10 {
             arr[i] = Son.nextInt();
         }
 
-        int lasonguyento = 1;
+        for (int b = 0; b < n; b++) {
+            int lasonguyento = 1;
 
-        for (int i = 2; i < arr[0]; i++) {
-            if (arr[0] % i == 0) {
-                lasonguyento = 0;
+            for (int i = 2; i < arr[b]; i++) {
+                if (arr[b] % i == 0) {
+                    lasonguyento = 0;
+                }
             }
-        }
-        if (lasonguyento == 1) {
-            System.out.print(arr[0] + " la so nguyen to");
-        }else {
-            System.out.print(arr[0] + " Khong la so nguyen to");
+            if (lasonguyento == 1) {
+                System.out.println(arr[b] + " la so nguyen to");
+            }else {
+                System.out.println(arr[b] + " Khong la so nguyen to");
+            }
+
         }
 
 
