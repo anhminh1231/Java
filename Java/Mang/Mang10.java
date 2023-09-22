@@ -6,8 +6,8 @@ public class Mang10 {
 
         int lasonguyento = 1;
 
-        for (int i = 2; i < arr[b]; i++) {
-            if (arr[b] % i == 0) {
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0) {
                 lasonguyento = 0;
             }
         }

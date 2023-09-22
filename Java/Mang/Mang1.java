@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class Mang1 {
+
+    
+
     public static void main(String[] args) {
         int n;
 
