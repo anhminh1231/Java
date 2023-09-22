@@ -26,7 +26,7 @@ public class Ham1 {
     //Cach 3
     public static String  Tinhchanle_chuoi(int x) {
         String  chanle = "";
-
+        
         if (x % 2 == 0) {
             chanle = "Chan";
         }
