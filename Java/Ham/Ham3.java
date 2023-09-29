@@ -1,6 +1,7 @@
 // cho 2 chuỗi ký tự
 // nếu chuỗi này là con của chuỗi kia, thì trả về 1
 // còn không thì trả về 0
+//vd: anh và the anh ; min và minh 
 
 package Ham;
 
@@ -8,14 +9,24 @@ import java.util.Scanner;
 
 public class Ham3 {
     public static String taochuoi1(String x, String y) {
-        String chuoi = "";
+        String chuoi = "0";
 
-        if (y == x) {
-            return chuoi = "1";
+        for (int a = 0; a < y.length()-x.length(); a++) {
+            
+            int sosanh = 1;
+            for (int b = 0; b < x.length(); b++) {
+                if (y.charAt(a+b) != x.charAt(b)) {
+                    sosanh = 0;
+                } 
+            }
+            if (sosanh == 1) {
+                chuoi = "1";
+                break;
+            }
         }
-        else {
-            return chuoi = "0";
-        }
+        return chuoi;
+
+        
     }
     public static void main(String[] args) {
         String n;
