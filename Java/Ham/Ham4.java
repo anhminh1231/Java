@@ -4,17 +4,12 @@ import java.util.Scanner;
 
 public class Ham4 {
     public static String Tinhboiso(int x, int y) {
-        
-
-        if (x % y == 0) {
+        if (x % y == 0 || y % x == 0) {
             return  "la boi";
         }
         else {
             return "khong phai boi";
         }
-
-
-        
     }
     public static void main(String[] args) {
         int n;

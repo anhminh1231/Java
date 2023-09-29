@@ -3,43 +3,108 @@ package Ham;
 import java.util.Scanner;
 
 public class Ham5 {
-    public static int Sosanh(int x,int y,int z) {
-        int ngaythangnam = 0;
+    public static int Kiemtra(int d,int m,int y) {
+        int ngaythangnam = 1;
 
-        if (x > 31) {
-            System.out.println(" loi ngay vui long nhap lai");
+        if (y < 0) {
+            ngaythangnam = 0;
         }
-        else if (x <= 31) {
-            System.out.print(x);
+        
+        if (m > 12 || m < 1) {
+            ngaythangnam = 0;
         }
-        else if (y > 12) {
-            System.out.println(" loi thang vui long nhap lai");
+        
+        switch (m) {
+            case 1:
+                if (d > 31 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 2:
+                
+                if (((y % 4 == 0) && 
+                    !(y % 100 == 0))
+                    || (y % 400 == 0)) {
+                        if (d > 29 || d < 1) {
+                            ngaythangnam = 0;
+                        }
+
+                }
+                else {
+                    if (d > 28 || d < 1) {
+                        ngaythangnam = 0;
+                    }
+                }
+                break;
+
+            case 3:
+                if (d > 31 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 4:
+                if (d > 30 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 5:
+                if (d > 31 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 6:
+                if (d > 30 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 7:
+                if (d > 31 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 8:
+                if (d > 31 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 9:
+                if (d > 30 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 10:
+                if (d > 31 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 11:
+                if (d > 30 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;
+            case 12:
+                if (d > 31 || d < 1) {
+                    ngaythangnam = 0;
+                }
+                break;    
         }
-        else if (y <= 12) {
-            System.out.print(y);
-        }
-        else if (z > 2023) {
-            System.out.println(" loi nam vui long nhap lai");
-        }
-        else if (z <= 2023) {
-            System.out.print(z);
-        }
+
 
         return ngaythangnam;
     }
     public static void main(String[] args) {
-        String n;
-        String m;
-        String p;
+        int ngay;
+        int thang;
+        int nam;
 
         Scanner taochuoi = new Scanner(System.in);
         System.out.print("Nhap ngay: ");
-            n = taochuoi.nextLine();
+            ngay = taochuoi.nextInt();
         System.out.print("Nhap thang: ");
-            m = taochuoi.nextLine();
+            thang = taochuoi.nextInt();
         System.out.print("Nhap nam: ");
-            p = taochuoi.nextLine();
+            nam = taochuoi.nextInt();
 
-        System.out.println(Sosanh(0, 0, 0));
+        System.out.print(Kiemtra(ngay, thang, nam));
     }
 }
