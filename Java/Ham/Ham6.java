@@ -14,21 +14,25 @@ public class Ham6 {
     
     
     public static void main(String[] args) {
+        int n;
         int k;
 
         Scanner taomang = new Scanner(System.in);
-        System.out.print("Nhap mang cho k: ");
+        System.out.print("Nhap mang cho n: ");
+            n = taomang.nextInt();
+        System.out.print("Nhap so cho k: ");
             k = taomang.nextInt();
 
-        int[] arr = new int[k];
 
-        for (int i = 0; i < k; i++) {
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
             System.out.print("Nhap so thu " + i + " : ");
             arr[i] = taomang.nextInt();
         }
 
-        for (int i = 0; i < k; i++) {
-            if (arr[i] > k) {
+        for (int i = 0; i < n; i++) {
+            if (arr[i] < k) {
                 arr[i] = 0;
             }
             System.out.print(arr[i] + " ");
